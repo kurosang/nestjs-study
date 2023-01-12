@@ -13,9 +13,10 @@ export class UserController {
 
   @Get()
   getUsers(): any {
-    const db = this.configService.get(ConfigEnum.DB);
-    const url = this.configService.get(ConfigEnum.DB_URL);
-    console.log(db, url);
+    // const db = this.configService.get(ConfigEnum.DB);
+    // const url = this.configService.get(ConfigEnum.DB_URL);
+    const data = this.configService.get('db');
+    console.log(data);
     return this.userService.getUsers();
   }
 
