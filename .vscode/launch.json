@@ -1,0 +1,18 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch via NPM",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "start:debug"],
+      "runtimeExecutable": "npm",
+      //   "runtimeVersion": "16.16.0", // 用nvm才有用的字段
+      "internalConsoleOptions": "neverOpen", // 不启动内置console
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ]
+}
