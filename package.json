@@ -26,6 +26,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "@types/js-yaml": "^4.0.5",
     "@types/lodash": "^4.14.191",
+    "config": "^3.3.8",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "js-yaml": "^4.1.0",
