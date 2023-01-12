@@ -15,9 +15,11 @@ export class UserController {
   getUsers(): any {
     // const db = this.configService.get(ConfigEnum.DB);
     // const url = this.configService.get(ConfigEnum.DB_URL);
-    const port = this.configService.get(ConfigEnum.DB_PORT);
+    // 命令行 $ DB_PASS=12345 pnpm run start:dev
+    const pass =
+      this.configService.get(ConfigEnum.DB_PASS) || process.env.DB_PASS;
     // const data = this.configService.get('db');
-    console.log(port);
+    console.log(pass);
     return this.userService.getUsers();
   }
 
