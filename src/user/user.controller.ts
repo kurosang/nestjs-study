@@ -16,10 +16,10 @@ export class UserController {
     // const db = this.configService.get(ConfigEnum.DB);
     // const url = this.configService.get(ConfigEnum.DB_URL);
     // 命令行 $ DB_PASS=12345 pnpm run start:dev
-    const pass =
-      this.configService.get(ConfigEnum.DB_PASS) || process.env.DB_PASS;
-    // const data = this.configService.get('db');
-    console.log(pass);
+    // const pass =
+    //   this.configService.get(ConfigEnum.DB_PASS) || process.env.DB_PASS;
+    // // const data = this.configService.get('db');
+    // console.log(pass);
     return this.userService.getUsers();
   }
 

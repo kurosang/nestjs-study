@@ -6,6 +6,7 @@ import * as Dotenv from 'dotenv';
 import * as Joi from 'joi'; // https://joi.dev/api/?v=17.7.0
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigEnum } from './enum/config.enum';
+import { MongooseModule, MongooseModuleOptions } from '@nestjs/mongoose';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 @Module({
@@ -26,20 +27,42 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
         DB_SYNC: Joi.string().default(false),
       }),
     }),
-    TypeOrmModule.forRootAsync({
+    // TypeOrmModule.forRootAsync({
+    //   imports: [ConfigModule],
+    //   inject: [ConfigService],
+    //   useFactory: (configService: ConfigService) =>
+    //     ({
+    //       type: configService.get(ConfigEnum.DB_TYPE),
+    //       host: configService.get(ConfigEnum.DB_HOST),
+    //       port: configService.get(ConfigEnum.DB_PORT),
+    //       username: configService.get(ConfigEnum.DB_USERNAME),
+    //       password: configService.get(ConfigEnum.DB_PASSWORD),
+    //       entities: [],
+    //       synchronize: configService.get(ConfigEnum.DB_SYNC), // 同步本地的schema与数据库 -> 初始化的时候去使用
+    //       logging: ['error'],
+    //     } as TypeOrmModuleOptions),
+    // }),
+    MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) =>
-        ({
-          type: configService.get(ConfigEnum.DB_TYPE),
-          host: configService.get(ConfigEnum.DB_HOST),
-          port: configService.get(ConfigEnum.DB_PORT),
-          username: configService.get(ConfigEnum.DB_USERNAME),
-          password: configService.get(ConfigEnum.DB_PASSWORD),
-          entities: [],
-          synchronize: configService.get(ConfigEnum.DB_SYNC), // 同步本地的schema与数据库 -> 初始化的时候去使用
-          logging: ['error'],
-        } as TypeOrmModuleOptions),
+      useFactory: (configService: ConfigService) => {
+        const host = configService.get(ConfigEnum.MONGO_HOST);
+        const port = configService.get(ConfigEnum.MONGO_PORT);
+        const username = configService.get(ConfigEnum.MONGO_INITDB_USERNAME);
+        const password = configService.get(ConfigEnum.MONGO_INITDB_PASSWORD);
+        const database = configService.get(ConfigEnum.MONGO_INITDB_DATABASE);
+
+        const uri = username
+          ? `mongodb://${username}:${password}@${host}:${port}/${database}`
+          : `mongodb://${host}:${port}/${database}`;
+        console.log(uri);
+        // todo
+        return {
+          uri: `mongodb://${host}:${port}/${database}`,
+          retryAttempts: Infinity,
+          retryDelay: 5000,
+        } as MongooseModuleOptions;
+      },
     }),
     // TypeOrmModule.forRoot({
     //   type: 'mysql',
