@@ -52,13 +52,11 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
         const password = configService.get(ConfigEnum.MONGO_INITDB_PASSWORD);
         const database = configService.get(ConfigEnum.MONGO_INITDB_DATABASE);
 
-        const uri = username
-          ? `mongodb://${username}:${password}@${host}:${port}/${database}`
-          : `mongodb://${host}:${port}/${database}`;
-        console.log(uri);
-        // todo
+        const uri = `mongodb://${host}:${port}/${database}`;
         return {
-          uri: `mongodb://${host}:${port}/${database}`,
+          user: username,
+          pass: password,
+          uri,
           retryAttempts: Infinity,
           retryDelay: 5000,
         } as MongooseModuleOptions;
