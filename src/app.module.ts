@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 // import configuration from './configuration';
 import * as Dotenv from 'dotenv';
 import * as Joi from 'joi'; // https://joi.dev/api/?v=17.7.0
+import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { ConfigEnum } from './enum/config.enum';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 @Module({
@@ -15,12 +17,40 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
       load: [() => Dotenv.config({ path: '.env' })],
       validationSchema: Joi.object({
         NODE_ENV: Joi.string().valid('prod', 'dev').default('dev'),
-        // DB_PORT: Joi.number().default(3306),
-        DB_PORT: Joi.number().valid(3306, 3308), // 限制数值是3306、3308
-        DB_URL: Joi.string().domain(),
+        DB_PORT: Joi.number().valid(3306), // 限制数值是3306
         DB_HOST: Joi.string().ip(), // IP类型
+        DB_TYPE: Joi.string().valid('mysql'),
+        DB_DATABASE: Joi.string().required(),
+        DB_USERNAME: Joi.string().required(),
+        DB_PASSWORD: Joi.string().required(),
+        DB_SYNC: Joi.string().default(false),
       }),
     }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) =>
+        ({
+          type: configService.get(ConfigEnum.DB_TYPE),
+          host: configService.get(ConfigEnum.DB_HOST),
+          port: configService.get(ConfigEnum.DB_PORT),
+          username: configService.get(ConfigEnum.DB_USERNAME),
+          password: configService.get(ConfigEnum.DB_PASSWORD),
+          entities: [],
+          synchronize: configService.get(ConfigEnum.DB_SYNC), // 同步本地的schema与数据库 -> 初始化的时候去使用
+          logging: ['error'],
+        } as TypeOrmModuleOptions),
+    }),
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: 'example',
+    //   entities: [],
+    //   synchronize: true, // 同步本地的schema与数据库 -> 初始化的时候去使用
+    //   logging: ['error'],
+    // }),
     UserModule,
   ],
   controllers: [],
