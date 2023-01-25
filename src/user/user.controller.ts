@@ -1,7 +1,8 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Post, Query } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
 import { ConfigEnum } from '../enum/config.enum';
+import { User } from './user.entity';
 
 @Controller('user')
 export class UserController {
@@ -20,7 +21,15 @@ export class UserController {
     //   this.configService.get(ConfigEnum.DB_PASS) || process.env.DB_PASS;
     // // const data = this.configService.get('db');
     // console.log(pass);
-    return this.userService.getUsers();
+    // return this.userService.getUsers();
+
+    return this.userService.findAll();
+  }
+
+  @Post()
+  addUser() {
+    const user = { username: 'kuro', password: '123456' } as User;
+    return this.userService.create(user);
   }
 
   @Get('range')
