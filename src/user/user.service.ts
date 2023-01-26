@@ -44,4 +44,15 @@ export class UserService {
       msg: 'success',
     };
   }
+
+  findProfile(id: number) {
+    return this.userRepository.findOne({
+      where: {
+        id,
+      },
+      relations: {
+        profile: true,
+      },
+    });
+  }
 }

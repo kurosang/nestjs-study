@@ -21,7 +21,7 @@ export class Profile {
   @Column()
   address: string;
 
-  @OneToOne(() => User)
+  @OneToOne(() => User, (user) => user.id)
   // @JoinColumn({ name: 'uid' }) // 设置name，默认是userId
   @JoinColumn() // 设置name，默认是userId
   user: User;

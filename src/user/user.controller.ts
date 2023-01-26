@@ -36,4 +36,9 @@ export class UserController {
   getRange(@Query() query): any {
     return this.userService.getRange(query.num);
   }
+
+  @Get('profile')
+  getProfile() {
+    return this.userService.findProfile(1);
+  }
 }
