@@ -43,8 +43,11 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
           password: configService.get(ConfigEnum.DB_PASSWORD),
           entities: [User, Profile, Logs, Roles],
           database: configService.get(ConfigEnum.DB_DATABASE),
-          synchronize: configService.get(ConfigEnum.DB_SYNC), // 同步本地的schema与数据库 -> 初始化的时候去使用
-          logging: ['error'],
+          // 同步本地的schema与数据库 -> 初始化的时候去使用
+          synchronize: configService.get(ConfigEnum.DB_SYNC),
+          // logging: ['error'],
+          // 开发时可以改为true，就可以将查询的语句打印出来
+          logging: process.env.NODE_ENV === 'dev',
         };
 
         return _ as TypeOrmModuleOptions;

@@ -76,17 +76,20 @@ export class UserService {
 
   findLogsByGroup(id: number) {
     // SELECT logs.result as result, COUNT(logs.result) as count from logs, user WHERE user.id = logs.userId AND user.id = 2 GROUP BY logs.result;
-    return this.logsRepository
-      .createQueryBuilder('logs')
-      .select('logs.result', 'result')
-      .addSelect('COUNT("logs.result")', 'count')
-      .leftJoinAndSelect('logs.user', 'user')
-      .where('user.id = :id', { id })
-      .groupBy('logs.result')
-      .orderBy('result', 'DESC')
-      .addOrderBy('count', 'DESC')
-      .offset(2) //分页
-      .limit(3) //分页
-      .getRawMany();
+    // return this.logsRepository
+    //   .createQueryBuilder('logs')
+    //   .select('logs.result', 'result')
+    //   .addSelect('COUNT("logs.result")', 'count')
+    //   .leftJoinAndSelect('logs.user', 'user')
+    //   .where('user.id = :id', { id })
+    //   .groupBy('logs.result')
+    //   .orderBy('result', 'DESC')
+    //   .addOrderBy('count', 'DESC')
+    //   .offset(2) //分页
+    //   .limit(3) //分页
+    //   .getRawMany();
+
+    // 使用原生SQL
+    return this.logsRepository.query('SELECT * FROM logs');
   }
 }
