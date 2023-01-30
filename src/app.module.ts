@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Global, Logger, Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import configuration from './configuration';
@@ -12,9 +12,12 @@ import { Profile } from './user/profile.entity';
 // import { Logs } from './logs/logs.entity';
 import { Roles } from './roles/roles.entity';
 import { join } from 'path';
-import { LoggerModule } from 'nestjs-pino';
+// import { LoggerModule } from 'nestjs-pino';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
+
+// global - 相当于把app.module进行一个全局注册
+@Global()
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -88,29 +91,30 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     //   logging: ['error'],
     // }),
     UserModule,
-    LoggerModule.forRoot({
-      pinoHttp: {
-        transport:
-          process.env.NODE_ENV === 'dev'
-            ? {
-                target: 'pino-pretty',
-                options: {
-                  colorize: true,
-                },
-              }
-            : {
-                target: 'pino-roll',
-                options: {
-                  file: join('logs', 'log.txt'),
-                  frequency: 'daily', // 频率
-                  size: '0.1k', // 一般10M
-                  mkdir: true,
-                },
-              },
-      },
-    }),
+    // LoggerModule.forRoot({
+    //   pinoHttp: {
+    //     transport:
+    //       process.env.NODE_ENV === 'dev'
+    //         ? {
+    //             target: 'pino-pretty',
+    //             options: {
+    //               colorize: true,
+    //             },
+    //           }
+    //         : {
+    //             target: 'pino-roll',
+    //             options: {
+    //               file: join('logs', 'log.txt'),
+    //               frequency: 'daily', // 频率
+    //               size: '0.1k', // 一般10M
+    //               mkdir: true,
+    //             },
+    //           },
+    //   },
+    // }),
   ],
   controllers: [],
-  providers: [],
+  providers: [Logger],
+  exports: [Logger],
 })
 export class AppModule {}
