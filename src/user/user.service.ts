@@ -1,14 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Logs } from '../logs/logs.entity';
+// import { Logs } from '../logs/logs.entity';
 import { User } from './user.entity';
 
 @Injectable()
 export class UserService {
   constructor(
-    @InjectRepository(User) private readonly userRepository: Repository<User>,
-    @InjectRepository(Logs) private readonly logsRepository: Repository<Logs>,
+    @InjectRepository(User) private readonly userRepository: Repository<User>, // @InjectRepository(Logs) private readonly logsRepository: Repository<Logs>,
   ) {}
 
   findAll() {
@@ -63,33 +62,33 @@ export class UserService {
   }
 
   async findLogs(id: number) {
-    const user = await this.findOne(id);
-    return this.logsRepository.find({
-      where: {
-        user,
-      },
-      relations: {
-        user: true,
-      },
-    });
+    // const user = await this.findOne(id);
+    // return this.logsRepository.find({
+    //   where: {
+    //     user,
+    //   },
+    //   relations: {
+    //     user: true,
+    //   },
+    // });
   }
 
   findLogsByGroup(id: number) {
-    // SELECT logs.result as result, COUNT(logs.result) as count from logs, user WHERE user.id = logs.userId AND user.id = 2 GROUP BY logs.result;
-    // return this.logsRepository
-    //   .createQueryBuilder('logs')
-    //   .select('logs.result', 'result')
-    //   .addSelect('COUNT("logs.result")', 'count')
-    //   .leftJoinAndSelect('logs.user', 'user')
-    //   .where('user.id = :id', { id })
-    //   .groupBy('logs.result')
-    //   .orderBy('result', 'DESC')
-    //   .addOrderBy('count', 'DESC')
-    //   .offset(2) //分页
-    //   .limit(3) //分页
-    //   .getRawMany();
-
-    // 使用原生SQL
-    return this.logsRepository.query('SELECT * FROM logs');
+    // // SELECT logs.result as result, COUNT(logs.result) as count from logs, user WHERE user.id = logs.userId AND user.id = 2 GROUP BY logs.result;
+    // // return this.logsRepository
+    // //   .createQueryBuilder('logs')
+    // //   .select('logs.result', 'result')
+    // //   .addSelect('COUNT("logs.result")', 'count')
+    // //   .leftJoinAndSelect('logs.user', 'user')
+    // //   .where('user.id = :id', { id })
+    // //   .groupBy('logs.result')
+    // //   .orderBy('result', 'DESC')
+    // //   .addOrderBy('count', 'DESC')
+    // //   .offset(2) //分页
+    // //   .limit(3) //分页
+    // //   .getRawMany();
+    // // 使用原生SQL
+    // return this.logsRepository.query('SELECT * FROM logs');
+    return [];
   }
 }

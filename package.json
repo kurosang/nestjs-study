@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "generate:models":"typeorm-model-generator -h 127.0.0.1 -p 3306 -d testdb -u root -x example -e mysql -o ./src"
+    "generate:models": "typeorm-model-generator -h 127.0.0.1 -p 3306 -d testdb -u root -x example -e mysql -o ./src"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -36,6 +36,10 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.8.3",
     "mysql2": "^2.3.3",
+    "nestjs-pino": "^3.1.2",
+    "pino-http": "^8.3.1",
+    "pino-pretty": "^9.1.1",
+    "pino-roll": "1.0.0-rc.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "typeorm": "^0.3.11"

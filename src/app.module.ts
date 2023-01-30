@@ -9,8 +9,10 @@ import { ConfigEnum } from './enum/config.enum';
 import { MongooseModule, MongooseModuleOptions } from '@nestjs/mongoose';
 import { User } from './user/user.entity';
 import { Profile } from './user/profile.entity';
-import { Logs } from './logs/logs.entity';
+// import { Logs } from './logs/logs.entity';
 import { Roles } from './roles/roles.entity';
+import { join } from 'path';
+import { LoggerModule } from 'nestjs-pino';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 @Module({
@@ -41,13 +43,14 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
           port: configService.get(ConfigEnum.DB_PORT),
           username: configService.get(ConfigEnum.DB_USERNAME),
           password: configService.get(ConfigEnum.DB_PASSWORD),
-          entities: [User, Profile, Logs, Roles],
+          entities: [User, Profile, Roles],
           database: configService.get(ConfigEnum.DB_DATABASE),
           // 同步本地的schema与数据库 -> 初始化的时候去使用
           synchronize: configService.get(ConfigEnum.DB_SYNC),
           // logging: ['error'],
           // 开发时可以改为true，就可以将查询的语句打印出来
-          logging: process.env.NODE_ENV === 'dev',
+          // logging: process.env.NODE_ENV === 'dev',
+          logging: false,
         };
 
         return _ as TypeOrmModuleOptions;
@@ -85,6 +88,27 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     //   logging: ['error'],
     // }),
     UserModule,
+    LoggerModule.forRoot({
+      pinoHttp: {
+        transport:
+          process.env.NODE_ENV === 'dev'
+            ? {
+                target: 'pino-pretty',
+                options: {
+                  colorize: true,
+                },
+              }
+            : {
+                target: 'pino-roll',
+                options: {
+                  file: join('logs', 'log.txt'),
+                  frequency: 'daily', // 频率
+                  size: '0.1k', // 一般10M
+                  mkdir: true,
+                },
+              },
+      },
+    }),
   ],
   controllers: [],
   providers: [],

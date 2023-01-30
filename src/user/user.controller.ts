@@ -3,14 +3,20 @@ import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
 import { ConfigEnum } from '../enum/config.enum';
 import { User } from './user.entity';
+import { Logger } from 'nestjs-pino';
 
 @Controller('user')
 export class UserController {
+  // private logger = new Logger(UserController.name);
+
   // 实际相当于 this.userSevice = new UserService()
   constructor(
     private userService: UserService,
     private configService: ConfigService,
-  ) {}
+    private logger: Logger,
+  ) {
+    this.logger.log('UserController init');
+  }
 
   @Get()
   getUsers(): any {
@@ -22,7 +28,7 @@ export class UserController {
     // // const data = this.configService.get('db');
     // console.log(pass);
     // return this.userService.getUsers();
-
+    this.logger.log('request /getUsers');
     return this.userService.findAll();
   }
 

@@ -1,4 +1,4 @@
-import { Logs } from '../logs/logs.entity';
+// import { Logs } from '../logs/logs.entity';
 import { Roles } from '../roles/roles.entity';
 import {
   Column,
@@ -22,9 +22,9 @@ export class User {
   @Column()
   password: string;
 
-  // Typescript -> 数据库 关联关系 Mapping
-  @OneToMany(() => Logs, (logs) => logs.user)
-  logs: Logs[];
+  // // Typescript -> 数据库 关联关系 Mapping
+  // @OneToMany(() => Logs, (logs) => logs.user)
+  // logs: Logs[];
 
   @ManyToMany(() => Roles, (roles) => roles.users)
   @JoinTable({ name: 'users_roles' })
