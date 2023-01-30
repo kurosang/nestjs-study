@@ -46,4 +46,13 @@ export class UserController {
   getLogs() {
     return this.userService.findLogs(1);
   }
+
+  @Get('logsbygroup')
+  async getLogsByGroup() {
+    const res = await this.userService.findLogsByGroup(1);
+    return res.map((o) => ({
+      result: o.result,
+      count: o.count,
+    }));
+  }
 }
