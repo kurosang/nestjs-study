@@ -6,6 +6,7 @@ import {
   LoggerService,
 } from '@nestjs/common';
 
+// 如果不设置参数，就是捕获所有异常，不限http
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   constructor(private logger: LoggerService) {}
