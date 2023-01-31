@@ -5,6 +5,7 @@ import { createLogger } from 'winston';
 import * as winston from 'winston';
 import { WinstonModule, utilities } from 'nest-winston';
 import 'winston-daily-rotate-file';
+import { HttpExceptionFilter } from './filters/http-exception.filter';
 async function bootstrap() {
   // createLogger of Winston
   const instance = createLogger({
@@ -46,14 +47,15 @@ async function bootstrap() {
       }),
     ],
   });
+  const logger = WinstonModule.createLogger({
+    instance,
+  });
   const app = await NestFactory.create(AppModule, {
     // 关闭整个nestjs日志
     // logger: false
-    logger: WinstonModule.createLogger({
-      instance,
-    }),
+    logger,
   });
-  console.log(123);
+  app.useGlobalFilters(new HttpExceptionFilter(logger));
   // app.setGlobalPrefix('api/v1');
   const port = 3000;
   await app.listen(port);

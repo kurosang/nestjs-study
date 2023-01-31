@@ -6,6 +6,9 @@ import {
   Logger,
   Post,
   Query,
+  HttpException,
+  HttpStatus,
+  NotFoundException,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
@@ -42,6 +45,11 @@ export class UserController {
     this.logger.error('request /getUsers');
     this.logger.debug('request /getUsers');
     this.logger.verbose('request /getUsers');
+    const user = { isAdmin: false };
+    if (!user.isAdmin) {
+      // throw new HttpException('ForBidden', HttpStatus.FORBIDDEN);
+      throw new NotFoundException('用户不存在');
+    }
     return this.userService.findAll();
   }
 
