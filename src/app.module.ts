@@ -1,19 +1,11 @@
 import { Global, Logger, Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import configuration from './configuration';
+import { ConfigModule } from '@nestjs/config';
 import * as Dotenv from 'dotenv';
 import * as Joi from 'joi'; // https://joi.dev/api/?v=17.7.0
-import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { ConfigEnum } from './enum/config.enum';
-import { MongooseModule, MongooseModuleOptions } from '@nestjs/mongoose';
-import { User } from './user/user.entity';
-import { Profile } from './user/profile.entity';
-// import { Logs } from './logs/logs.entity';
-import { Roles } from './roles/roles.entity';
-import { join } from 'path';
-// import { LoggerModule } from 'nestjs-pino';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { LogServiceModule } from './log-service/log-service.module';
+import { connectionParams } from '../ormconfig';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -37,83 +29,9 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
         DB_SYNC: Joi.string().default(false),
       }),
     }),
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (configService: ConfigService) => {
-        const _ = {
-          type: configService.get(ConfigEnum.DB_TYPE),
-          host: configService.get(ConfigEnum.DB_HOST),
-          port: configService.get(ConfigEnum.DB_PORT),
-          username: configService.get(ConfigEnum.DB_USERNAME),
-          password: configService.get(ConfigEnum.DB_PASSWORD),
-          entities: [User, Profile, Roles],
-          database: configService.get(ConfigEnum.DB_DATABASE),
-          // 同步本地的schema与数据库 -> 初始化的时候去使用
-          synchronize: configService.get(ConfigEnum.DB_SYNC),
-          // logging: ['error'],
-          // 开发时可以改为true，就可以将查询的语句打印出来
-          // logging: process.env.NODE_ENV === 'dev',
-          logging: false,
-        };
-
-        return _ as TypeOrmModuleOptions;
-      },
-    }),
-    // MongooseModule.forRootAsync({
-    //   imports: [ConfigModule],
-    //   inject: [ConfigService],
-    //   useFactory: (configService: ConfigService) => {
-    //     const host = configService.get(ConfigEnum.MONGO_HOST);
-    //     const port = configService.get(ConfigEnum.MONGO_PORT);
-    //     const username = configService.get(ConfigEnum.MONGO_INITDB_USERNAME);
-    //     const password = configService.get(ConfigEnum.MONGO_INITDB_PASSWORD);
-    //     const database = configService.get(ConfigEnum.MONGO_INITDB_DATABASE);
-
-    //     const uri = `mongodb://${host}:${port}/${database}`;
-    //     return {
-    //       user: username,
-    //       pass: password,
-    //       uri,
-    //       retryAttempts: Infinity,
-    //       retryDelay: 5000,
-    //     } as MongooseModuleOptions;
-    //   },
-    // }),
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3306,
-    //   username: 'root',
-    //   password: 'example',
-    //   database: 'testdb',
-    //   entities: [],
-    //   synchronize: true, // 同步本地的schema与数据库 -> 初始化的时候去使用
-    //   logging: ['error'],
-    // }),
+    TypeOrmModule.forRoot(connectionParams),
     UserModule,
     LogServiceModule,
-    // LoggerModule.forRoot({
-    //   pinoHttp: {
-    //     transport:
-    //       process.env.NODE_ENV === 'dev'
-    //         ? {
-    //             target: 'pino-pretty',
-    //             options: {
-    //               colorize: true,
-    //             },
-    //           }
-    //         : {
-    //             target: 'pino-roll',
-    //             options: {
-    //               file: join('logs', 'log.txt'),
-    //               frequency: 'daily', // 频率
-    //               size: '0.1k', // 一般10M
-    //               mkdir: true,
-    //             },
-    //           },
-    //   },
-    // }),
   ],
   controllers: [],
   providers: [Logger],
