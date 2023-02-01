@@ -14,6 +14,7 @@ import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
 import { ConfigEnum } from '../enum/config.enum';
 import { User } from './user.entity';
+import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 
 // import { Logger } from 'nestjs-pino';
 
@@ -25,7 +26,8 @@ export class UserController {
   constructor(
     private userService: UserService,
     private configService: ConfigService,
-    private readonly logger: Logger,
+    @Inject(WINSTON_MODULE_NEST_PROVIDER)
+    private readonly logger: LoggerService,
   ) {
     this.logger.log('UserController init');
   }

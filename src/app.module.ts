@@ -13,6 +13,7 @@ import { Profile } from './user/profile.entity';
 import { Roles } from './roles/roles.entity';
 import { join } from 'path';
 // import { LoggerModule } from 'nestjs-pino';
+import { LogServiceModule } from './log-service/log-service.module';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -91,6 +92,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     //   logging: ['error'],
     // }),
     UserModule,
+    LogServiceModule,
     // LoggerModule.forRoot({
     //   pinoHttp: {
     //     transport:

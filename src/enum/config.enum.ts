@@ -12,3 +12,8 @@ export enum ConfigEnum {
   MONGO_INITDB_USERNAME = 'MONGO_INITDB_USERNAME',
   MONGO_INITDB_PASSWORD = 'MONGO_INITDB_PASSWORD',
 }
+
+export enum LogEnum {
+  LOG_ON = 'LOG_ON',
+  LOG_LEVEL = 'LOG_LEVEL',
+}
