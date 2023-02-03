@@ -6,6 +6,22 @@ import { Console } from 'winston/lib/winston/transports';
 import * as DailyRotateFile from 'winston-daily-rotate-file';
 import { LogEnum } from '../enum/config.enum';
 
+function createDailyRotateTransport(level: string, filename: string) {
+  return new DailyRotateFile({
+    level,
+    dirname: 'logs',
+    filename: `${filename}-%DATE%.log`,
+    datePattern: 'YYYY-MM-DD-HH',
+    zippedArchive: true,
+    maxSize: '20m',
+    maxFiles: '14d', //超过14天就删除
+    format: winston.format.combine(
+      winston.format.timestamp(),
+      winston.format.simple(),
+    ),
+  });
+}
+
 @Module({
   imports: [
     WinstonModule.forRootAsync({
@@ -18,40 +34,15 @@ import { LogEnum } from '../enum/config.enum';
             utilities.format.nestLike(),
           ),
         });
-
-        const dailyTransports = new DailyRotateFile({
-          level: 'warn',
-          dirname: 'logs',
-          filename: 'application-%DATE%.log',
-          datePattern: 'YYYY-MM-DD-HH',
-          zippedArchive: true,
-          maxSize: '20m',
-          maxFiles: '14d', //超过14天就删除
-          format: winston.format.combine(
-            winston.format.timestamp(),
-            winston.format.simple(),
-          ),
-        });
-
-        const dailyInfoTransports = new DailyRotateFile({
-          level: configService.get(LogEnum.LOG_LEVEL),
-          dirname: 'logs',
-          filename: 'info-%DATE%.log',
-          datePattern: 'YYYY-MM-DD-HH',
-          zippedArchive: true,
-          maxSize: '20m',
-          maxFiles: '14d', //超过14天就删除
-          format: winston.format.combine(
-            winston.format.timestamp(),
-            winston.format.simple(),
-          ),
-        });
-
+        console.log(configService.get(LogEnum.LOG_ON));
         return {
           transports: [
             consoleTransports,
             ...(configService.get(LogEnum.LOG_ON)
-              ? [dailyTransports, dailyInfoTransports]
+              ? [
+                  createDailyRotateTransport('info', 'application'),
+                  createDailyRotateTransport('warn', 'error'),
+                ]
               : []),
           ],
         } as WinstonModuleOptions;

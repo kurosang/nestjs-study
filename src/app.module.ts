@@ -21,12 +21,17 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
       validationSchema: Joi.object({
         NODE_ENV: Joi.string().valid('prod', 'dev').default('dev'),
         DB_PORT: Joi.number().valid(3306), // 限制数值是3306
-        DB_HOST: Joi.string().ip(), // IP类型
+        DB_HOST: Joi.alternatives().try(
+          Joi.string().ip(),
+          Joi.string().domain(),
+        ), // IP类型
         DB_TYPE: Joi.string().valid('mysql'),
         DB_DATABASE: Joi.string().required(),
         DB_USERNAME: Joi.string().required(),
         DB_PASSWORD: Joi.string().required(),
         DB_SYNC: Joi.string().default(false),
+        LOG_ON: Joi.boolean(),
+        LOG_LEVEL: Joi.string(),
       }),
     }),
     TypeOrmModule.forRoot(connectionParams),
