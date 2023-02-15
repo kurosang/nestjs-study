@@ -35,7 +35,7 @@ function buildConnectionOptions() {
     entities: entitiesDir,
     database: config[ConfigEnum.DB_DATABASE],
     synchronize: true,
-    logging: false,
+    logging: true,
   } as TypeOrmModuleOptions;
 }
 
