@@ -14,6 +14,7 @@ import {
   Param,
   Delete,
   Req,
+  UseFilters,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
@@ -21,10 +22,12 @@ import { ConfigEnum } from '../enum/config.enum';
 import { User } from './user.entity';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { getUserDto } from './dto/get-user.dto';
+import { TypeormFilter } from '../filters/typeorm.filter';
 
 // import { Logger } from 'nestjs-pino';
 
 @Controller('user')
+@UseFilters(new TypeormFilter())
 export class UserController {
   // private logger = new Logger(UserController.name);
 

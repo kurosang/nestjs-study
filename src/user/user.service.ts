@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { conditionUtils } from '../utils/db.helper';
@@ -64,6 +64,18 @@ export class UserService {
 
   async create(user: User) {
     const userTmp = await this.userRepository.create(user);
+    // try {
+    //   const res = await this.userRepository.save(userTmp);
+    //   return res;
+    // } catch (error) {
+    //   console.log(
+    //     '🚀 ~ file: user.service.ts:71 ~ UserService ~ create ~ error',
+    //     error,
+    //   );
+    //   if (error?.errno === 1062) {
+    //     throw new HttpException(error.sqlMessage, 500);
+    //   }
+    // }
     return this.userRepository.save(userTmp);
   }
 

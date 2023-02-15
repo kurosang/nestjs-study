@@ -8,6 +8,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import * as requestIp from 'request-ip';
+import { QueryFailedError } from 'typeorm';
 
 // 如果不设置参数，就是捕获所有异常，不限http
 @Catch()
@@ -27,6 +28,16 @@ export class AllExceptionFilter implements ExceptionFilter {
         ? exception.getStatus()
         : HttpStatus.INTERNAL_SERVER_ERROR;
 
+    const msg = exception['response'] || 'Internal Server Error';
+
+    // // 加入更多异常错误逻辑
+    // if (exception instanceof QueryFailedError) {
+    //   msg = exception.message;
+    //   // if (exception.driverError.errno === 1062) {
+    //   //   msg = '唯一索引冲突';
+    //   // }
+    // }
+
     const responseBody = {
       headers: request.headers,
       query: request.query,
@@ -37,7 +48,7 @@ export class AllExceptionFilter implements ExceptionFilter {
       // IP信息
       ip: requestIp.getClientIp(request),
       exception: exception['name'],
-      error: exception['response'] || 'Internal Server Error',
+      error: msg,
     };
     this.logger.error('[kuro]', responseBody);
 
