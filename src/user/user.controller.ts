@@ -9,12 +9,18 @@ import {
   HttpException,
   HttpStatus,
   NotFoundException,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Req,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
 import { ConfigEnum } from '../enum/config.enum';
 import { User } from './user.entity';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
+import { getUserDto } from './dto/get-user.dto';
 
 // import { Logger } from 'nestjs-pino';
 
@@ -33,42 +39,47 @@ export class UserController {
   }
 
   @Get()
-  getUsers(): any {
-    // const db = this.configService.get(ConfigEnum.DB);
-    // const url = this.configService.get(ConfigEnum.DB_URL);
-    // 命令行 $ DB_PASS=12345 pnpm run start:dev
-    // const pass =
-    //   this.configService.get(ConfigEnum.DB_PASS) || process.env.DB_PASS;
-    // // const data = this.configService.get('db');
-    // console.log(pass);
-    // return this.userService.getUsers();
-    this.logger.log('request /getUsers');
-    this.logger.warn('request /getUsers');
-    this.logger.error('request /getUsers');
-    this.logger.debug('request /getUsers');
-    this.logger.verbose('request /getUsers');
-    const user = { isAdmin: false };
-    if (!user.isAdmin) {
-      // throw new HttpException('ForBidden', HttpStatus.FORBIDDEN);
-      throw new NotFoundException('用户不存在');
-    }
-    return this.userService.findAll();
+  getUsers(@Query() query: getUserDto): any {
+    console.log(
+      '🚀 ~ file: user.controller.ts:50 ~ UserController ~ getUsers ~ query',
+      query,
+    );
+    return this.userService.findAll(query);
   }
 
   @Post()
-  addUser() {
-    const user = { username: 'kuro', password: '123456' } as User;
+  addUser(@Body() dto: any, @Req() req: any) {
+    console.log(
+      '🚀 ~ file: user.controller.ts:62 ~ UserController ~ addUser ~ req',
+      req,
+    );
+    const user = dto as User;
     return this.userService.create(user);
+  }
+
+  @Get('profile')
+  getProfile(@Query() query) {
+    console.log(
+      '🚀 ~ file: user.controller.ts:88 ~ UserController ~ getProfile ~ query',
+      query,
+    );
+    return this.userService.findProfile(1);
+  }
+
+  @Patch('/:id')
+  updateUser(@Body() dto: any, @Param('id') id: number) {
+    const user = dto as User;
+    return this.userService.update(id, user);
+  }
+
+  @Delete('/:id')
+  deleteUser(@Param('id') id: number) {
+    return this.userService.remove(id);
   }
 
   @Get('range')
   getRange(@Query() query): any {
     return this.userService.getRange(query.num);
-  }
-
-  @Get('profile')
-  getProfile() {
-    return this.userService.findProfile(1);
   }
 
   @Get('logs')
@@ -83,5 +94,10 @@ export class UserController {
       result: o.result,
       count: o.count,
     }));
+  }
+
+  @Get('/:id')
+  getUser(): any {
+    return 'hello world';
   }
 }

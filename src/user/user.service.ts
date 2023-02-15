@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { getUserDto } from './dto/get-user.dto';
 // import { Logs } from '../logs/logs.entity';
 import { User } from './user.entity';
 
@@ -10,7 +11,7 @@ export class UserService {
     @InjectRepository(User) private readonly userRepository: Repository<User>, // @InjectRepository(Logs) private readonly logsRepository: Repository<Logs>,
   ) {}
 
-  findAll() {
+  findAll(query: getUserDto) {
     return this.userRepository.find();
   }
 
