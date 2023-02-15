@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { conditionUtils } from '../utils/db.helper';
 import { getUserDto } from './dto/get-user.dto';
 // import { Logs } from '../logs/logs.entity';
 import { User } from './user.entity';
@@ -15,30 +16,42 @@ export class UserService {
     const { limit, page, username, gender, role } = query;
     const take = limit || 10;
     const skip = ((page || 1) - 1) * take; // 跳过多少条
-    return this.userRepository.find({
-      select: {
-        id: true,
-        username: true,
-        profile: {
-          gender: true,
-        },
-      },
-      relations: {
-        profile: true,
-        roles: true,
-      },
-      where: {
-        username,
-        profile: {
-          gender,
-        },
-        roles: {
-          id: role,
-        },
-      },
-      take,
-      skip,
-    });
+    // return this.userRepository.find({
+    //   select: {
+    //     id: true,
+    //     username: true,
+    //     profile: {
+    //       gender: true,
+    //     },
+    //   },
+    //   relations: {
+    //     profile: true,
+    //     roles: true,
+    //   },
+    //   where: {
+    //     username,
+    //     profile: {
+    //       gender,
+    //     },
+    //     roles: {
+    //       id: role,
+    //     },
+    //   },
+    //   take,
+    //   skip,
+    // });
+    const qb = this.userRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.profile', 'profile')
+      .innerJoinAndSelect('user.roles', 'roles');
+
+    const obj = {
+      'profile.gender': gender,
+      'roles.id': role,
+    };
+
+    const newQuery = conditionUtils<User>(qb, obj);
+    return newQuery.take(take).skip(skip).getMany();
   }
 
   find(username: string) {
