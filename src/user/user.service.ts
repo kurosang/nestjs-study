@@ -64,23 +64,16 @@ export class UserService {
 
   async create(user: User) {
     const userTmp = await this.userRepository.create(user);
-    // try {
-    //   const res = await this.userRepository.save(userTmp);
-    //   return res;
-    // } catch (error) {
-    //   console.log(
-    //     '🚀 ~ file: user.service.ts:71 ~ UserService ~ create ~ error',
-    //     error,
-    //   );
-    //   if (error?.errno === 1062) {
-    //     throw new HttpException(error.sqlMessage, 500);
-    //   }
-    // }
     return this.userRepository.save(userTmp);
   }
 
   async update(id: number, user: Partial<User>) {
-    return this.userRepository.update(id, user);
+    const userTemp = await this.findProfile(id);
+    const newUser = this.userRepository.merge(userTemp, user);
+    // 联合模型更新，需要使用save方法或者queryBuilder
+    return this.userRepository.save(newUser);
+    // 下面的update方法，只适合单模型的更新，不适合有关系的模型更新
+    // return this.userRepository.update(id, user);
   }
 
   async remove(id: number) {

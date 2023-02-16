@@ -4,13 +4,13 @@ import { QueryFailedError, TypeORMError } from 'typeorm';
 @Catch()
 export class TypeormFilter<T> implements ExceptionFilter {
   catch(exception: TypeORMError, host: ArgumentsHost) {
-    console.log(
-      '🚀 ~ file: typeorm.filter.ts:6 ~ TypeormFilter<T> ~ exception',
-      exception,
-    );
+    // console.log(
+    //   '🚀 ~ file: typeorm.filter.ts:6 ~ TypeormFilter<T> ~ exception',
+    //   exception,
+    // );
     const ctx = host.switchToHttp();
 
-    console.log('host msg:', ctx);
+    // console.log('host msg:', ctx);
     let code = 500;
     if (exception instanceof QueryFailedError) {
       code = exception.driverError.errno;

@@ -15,6 +15,8 @@ import {
   Delete,
   Req,
   UseFilters,
+  Headers,
+  UnauthorizedException,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
@@ -27,7 +29,7 @@ import { TypeormFilter } from '../filters/typeorm.filter';
 // import { Logger } from 'nestjs-pino';
 
 @Controller('user')
-@UseFilters(new TypeormFilter())
+// @UseFilters(new TypeormFilter())
 export class UserController {
   // private logger = new Logger(UserController.name);
 
@@ -70,9 +72,25 @@ export class UserController {
   }
 
   @Patch('/:id')
-  updateUser(@Body() dto: any, @Param('id') id: number) {
-    const user = dto as User;
-    return this.userService.update(id, user);
+  updateUser(
+    @Body() dto: any,
+    @Param('id') id: number,
+    @Headers('Authorization') header: any,
+  ) {
+    console.log(
+      '🚀 ~ file: user.controller.ts:79 ~ UserController ~ header',
+      header,
+    );
+
+    // 权限1: 判断用户是否是自己
+    // 权限2： 判断用户是否有更新user的权限
+    // 返回数据：不能包含敏感的password等信息
+    if (id === header) {
+      const user = dto as User;
+      return this.userService.update(id, user);
+    } else {
+      throw new UnauthorizedException('权限不够');
+    }
   }
 
   @Delete('/:id')
