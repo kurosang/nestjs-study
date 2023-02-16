@@ -1,6 +1,8 @@
 // import { Logs } from '../logs/logs.entity';
 import { Roles } from '../roles/roles.entity';
 import {
+  AfterInsert,
+  AfterRemove,
   Column,
   Entity,
   JoinTable,
@@ -32,4 +34,14 @@ export class User {
 
   @OneToOne(() => Profile, (profile) => profile.user)
   profile: Profile;
+
+  @AfterInsert()
+  afterInsert() {
+    console.log('AfterInsert', this.id);
+  }
+
+  @AfterRemove()
+  afterRemove() {
+    console.log('afterRemove');
+  }
 }
