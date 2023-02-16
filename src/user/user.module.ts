@@ -6,9 +6,10 @@ import { User } from './user.entity';
 import { UserService } from './user.service';
 import { LoggerModule } from 'nestjs-pino';
 import path = require('path');
+import { Roles } from '../roles/roles.entity';
 @Module({
   imports: [
-    TypeOrmModule.forFeature([User]),
+    TypeOrmModule.forFeature([User, Roles]),
     // LoggerModule.forRoot({
     //   pinoHttp: {
     //     transport:

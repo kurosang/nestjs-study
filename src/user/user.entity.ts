@@ -28,7 +28,7 @@ export class User {
   // @OneToMany(() => Logs, (logs) => logs.user)
   // logs: Logs[];
 
-  @ManyToMany(() => Roles, (roles) => roles.users)
+  @ManyToMany(() => Roles, (roles) => roles.users, { cascade: ['insert'] })
   @JoinTable({ name: 'users_roles' })
   roles: Roles[];
 
