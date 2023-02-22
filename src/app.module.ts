@@ -6,6 +6,7 @@ import * as Joi from 'joi'; // https://joi.dev/api/?v=17.7.0
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LogServiceModule } from './log-service/log-service.module';
 import { connectionParams } from '../ormconfig';
+import { AuthModule } from './auth/auth.module';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -37,6 +38,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     TypeOrmModule.forRoot(connectionParams),
     UserModule,
     LogServiceModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [Logger],

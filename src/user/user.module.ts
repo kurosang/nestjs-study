@@ -32,6 +32,7 @@ import { Roles } from '../roles/roles.entity';
     //   },
     // }),
   ],
+  exports: [UserService],
   controllers: [UserController],
   providers: [UserService],
 })
