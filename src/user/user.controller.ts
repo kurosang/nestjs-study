@@ -17,6 +17,7 @@ import {
   UseFilters,
   Headers,
   UnauthorizedException,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
@@ -63,10 +64,11 @@ export class UserController {
   }
 
   @Get('profile')
-  getProfile(@Query() query) {
+  getProfile(@Query('id', ParseIntPipe) id) {
     console.log(
       '🚀 ~ file: user.controller.ts:88 ~ UserController ~ getProfile ~ query',
-      query,
+      id,
+      typeof id,
     );
     return this.userService.findProfile(1);
   }
