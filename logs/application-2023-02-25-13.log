@@ -1,0 +1,15 @@
+info: UserController init {"timestamp":"2023-02-25T05:22:09.496Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-25T05:22:09.536Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.538Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.539Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.539Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.540Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.541Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.541Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.541Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.542Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.542Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-25T05:22:09.542Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.543Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-25T05:22:09.543Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-25T05:22:09.545Z"}

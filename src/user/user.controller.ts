@@ -26,6 +26,8 @@ import { User } from './user.entity';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { getUserDto } from './dto/get-user.dto';
 import { TypeormFilter } from '../filters/typeorm.filter';
+import { CreateUserPipe } from './pipes/create-user/create-user.pipe';
+import { CreateUserDto } from './dto/create-user.dto';
 
 // import { Logger } from 'nestjs-pino';
 
@@ -54,7 +56,7 @@ export class UserController {
   }
 
   @Post()
-  addUser(@Body() dto: any, @Req() req: any) {
+  addUser(@Body(CreateUserPipe) dto: CreateUserDto, @Req() req: any) {
     console.log(
       '🚀 ~ file: user.controller.ts:62 ~ UserController ~ addUser ~ req',
       req,
