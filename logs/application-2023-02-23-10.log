@@ -1,0 +1,274 @@
+info: UserController init {"timestamp":"2023-02-23T02:05:02.894Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:05:02.904Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.907Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.908Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.909Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.910Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.910Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.911Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.912Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.912Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.913Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:05:02.914Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.914Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:05:02.915Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:05:02.918Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"74e69f16-07a7-4554-b057-946ecd4350e8","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:05:39.228Z"}],"timestamp":"2023-02-23T02:05:39.231Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /signup","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"3cd9e2cf-b4ef-4d57-ac84-a9bb786e3c13","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:06:59.919Z"}],"timestamp":"2023-02-23T02:06:59.924Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signup","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"f5c95cbf-1377-4ee4-a084-64e4578fd737","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:07:39.703Z"}],"timestamp":"2023-02-23T02:07:39.705Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"f5078126-e4ae-4a3e-9d69-e176f64afd3a","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:08:08.827Z"}],"timestamp":"2023-02-23T02:08:08.829Z"}
+info: UserController init {"timestamp":"2023-02-23T02:09:15.004Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:09:15.014Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.018Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.019Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.020Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.021Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.022Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.022Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.023Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.025Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.027Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:09:15.027Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.028Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:09:15.029Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:09:15.033Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"4d14f577-97f8-4d51-9cd5-484bc31469f5","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:09:17.544Z"}],"timestamp":"2023-02-23T02:09:17.546Z"}
+info: UserController init {"timestamp":"2023-02-23T02:10:10.967Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:10:10.978Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.982Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.983Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.983Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.984Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.986Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.987Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.988Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.989Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.990Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:10:10.990Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.991Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:10.992Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:10:10.996Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"0b733e93-13f4-4c1c-ab78-69cb99514718","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:10:12.851Z"}],"timestamp":"2023-02-23T02:10:12.853Z"}
+info: UserController init {"timestamp":"2023-02-23T02:10:39.792Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:10:39.799Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.802Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.803Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.804Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.805Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.805Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.806Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.807Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.808Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.810Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:10:39.811Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.814Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:10:39.815Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:10:39.818Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"dd799fde-be63-4d9e-9122-981a9e6ce3ad","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:10:41.526Z"}],"timestamp":"2023-02-23T02:10:41.528Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"70f6ea36-003a-49dc-83d9-947b8b8ede71","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:11:37.373Z"}],"timestamp":"2023-02-23T02:11:37.379Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"9a8aeee2-b1e9-4cef-9e44-28df96b92a4c","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:12:08.166Z"}],"timestamp":"2023-02-23T02:12:08.174Z"}
+info: UserController init {"timestamp":"2023-02-23T02:12:53.464Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:12:53.471Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.474Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.476Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.477Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.478Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.479Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.479Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.480Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.480Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.481Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:12:53.481Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.482Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:12:53.483Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:12:53.486Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"d679287f-bb56-41bf-accb-d29a5d7a28ad","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:12:59.062Z"}],"timestamp":"2023-02-23T02:12:59.063Z"}
+info: UserController init {"timestamp":"2023-02-23T02:13:27.308Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:13:27.320Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.324Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.325Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.325Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.327Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.328Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.329Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.330Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.331Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.332Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:13:27.333Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.334Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:13:27.335Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:13:27.339Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth/signin","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"79be2922-28a4-4bb7-b267-8bba2f6a267d","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:13:30.413Z"}],"timestamp":"2023-02-23T02:13:30.415Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":{"error":"Not Found","message":"Cannot GET /auth","statusCode":404},"exception":"NotFoundException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"71a14b86-7b73-421b-8dfc-f4960e429382","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:14:19.837Z"}],"timestamp":"2023-02-23T02:14:19.841Z"}
+info: UserController init {"timestamp":"2023-02-23T02:15:45.222Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:15:45.233Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.236Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.237Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.238Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.239Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.240Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.241Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.242Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.243Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.245Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:15:45.246Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.246Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:15:45.247Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:15:45.250Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":"Internal Server Error","exception":"QueryFailedError","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"1a2f9799-0eb7-4dbf-bffc-16a51615eb91","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:15:47.375Z"}],"timestamp":"2023-02-23T02:15:47.377Z"}
+info: UserController init {"timestamp":"2023-02-23T02:16:12.614Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:16:12.622Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.625Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.625Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.626Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.627Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.628Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.628Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.629Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.630Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.631Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:16:12.632Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.633Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:16:12.633Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:16:12.636Z"}
+error: [kuro] {"stack":[{"body":{},"error":"Internal Server Error","exception":"QueryFailedError","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"text/plain","host":"127.0.0.1:3000","postman-token":"7353dab6-a9ee-4fee-81c1-a9a62e688219","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:18:06.934Z"}],"timestamp":"2023-02-23T02:18:06.935Z"}
+info: UserController init {"timestamp":"2023-02-23T02:20:46.979Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:20:46.986Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.989Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.992Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.993Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.994Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.994Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.995Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.996Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.997Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:46.998Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:20:46.999Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:47.000Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:20:47.001Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:20:47.004Z"}
+info: UserController init {"timestamp":"2023-02-23T02:22:21.675Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:22:21.686Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.692Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.693Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.694Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.695Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.696Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.699Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.701Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.704Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.706Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:22:21.708Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.709Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:22:21.710Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:22:21.716Z"}
+info: UserController init {"timestamp":"2023-02-23T02:25:14.339Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:25:14.348Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.352Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.353Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.357Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.358Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.359Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.359Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.360Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.361Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.363Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:25:14.364Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.365Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:25:14.367Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:25:14.373Z"}
+info: UserController init {"timestamp":"2023-02-23T02:28:29.447Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:28:29.458Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.463Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.465Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.467Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.469Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.470Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.470Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.471Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.472Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.474Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:28:29.474Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.475Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:28:29.476Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:28:29.480Z"}
+error: [kuro] {"stack":[{"body":{},"error":"用户名或密码不能为空","exception":"HttpException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"text/plain","host":"127.0.0.1:3000","postman-token":"00ba64eb-885d-4805-8a55-01e656745629","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:29:35.423Z"}],"timestamp":"2023-02-23T02:29:35.425Z"}
+error: [kuro] {"stack":[{"body":{},"error":"用户名或密码不能为空","exception":"HttpException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"text/plain","host":"127.0.0.1:3000","postman-token":"813b6d6a-ae50-449c-a9c4-eaabba2d66d4","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:30:09.340Z"}],"timestamp":"2023-02-23T02:30:09.340Z"}
+info: UserController init {"timestamp":"2023-02-23T02:30:31.274Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:30:31.285Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.288Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.289Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.294Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.296Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.298Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.299Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.300Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.301Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.303Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:30:31.304Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.306Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:30:31.308Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:30:31.315Z"}
+error: [kuro] {"stack":[{"body":{},"error":"用户名或密码不能为空","exception":"HttpException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"text/plain","host":"127.0.0.1:3000","postman-token":"3c2e10e4-0f88-4dec-81c6-cc9c62420398","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:30:32.374Z"}],"timestamp":"2023-02-23T02:30:32.375Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":"Internal Server Error","exception":"QueryFailedError","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"a648b047-d3e3-43b7-8028-f88351527c60","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:30:41.310Z"}],"timestamp":"2023-02-23T02:30:41.311Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","username":"kkk"},"error":"Internal Server Error","exception":"QueryFailedError","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"46","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"b13b4053-3502-4346-b8ca-3830eaea7f95","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{},"query":{},"timestamp":"2023-02-23T02:31:07.580Z"}],"timestamp":"2023-02-23T02:31:07.580Z"}
+info: UserController init {"timestamp":"2023-02-23T02:32:12.298Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:32:12.312Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.318Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.320Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.322Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.323Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.324Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.325Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.328Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.333Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.338Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:32:12.340Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.342Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:12.345Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:32:12.358Z"}
+info: UserController init {"timestamp":"2023-02-23T02:32:53.330Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:32:53.339Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.342Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.343Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.343Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.344Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.344Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.345Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.346Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.347Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.348Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:32:53.349Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.350Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:32:53.350Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:32:53.352Z"}
+info: UserController init {"timestamp":"2023-02-23T02:35:10.462Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:35:10.475Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.480Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.481Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.482Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.483Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.484Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.485Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.486Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.486Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.488Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:35:10.489Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.491Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:10.492Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:35:10.497Z"}
+info: UserController init {"timestamp":"2023-02-23T02:35:56.173Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:35:56.180Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.184Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.184Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.185Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.186Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.187Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.187Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.188Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.188Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.189Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-02-23T02:35:56.190Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.191Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-02-23T02:35:56.192Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-23T02:35:56.195Z"}

@@ -1,0 +1,13 @@
+info: UserController init {"timestamp":"2023-02-16T07:02:48.246Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-02-16T07:02:48.251Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.255Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.256Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.256Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.257Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.258Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.259Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.259Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.260Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-02-16T07:02:48.261Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-02-16T07:02:48.263Z"}
+error: [kuro] {"stack":[{"body":{"password":"123","profile":{"photo":"pppp"},"username":"kuro111"},"error":{"error":"Unauthorized","message":"权限不够","statusCode":401},"exception":"UnauthorizedException","headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br","authorization":"11111","connection":"keep-alive","content-length":"96","content-type":"application/json","host":"127.0.0.1:3000","postman-token":"5c4974ac-c746-41fe-84b5-a19fa4d094c6","user-agent":"PostmanRuntime/7.26.8"},"ip":"::ffff:127.0.0.1","params":{"id":"2"},"query":{},"timestamp":"2023-02-16T07:02:50.444Z"}],"timestamp":"2023-02-16T07:02:50.446Z"}
