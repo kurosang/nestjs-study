@@ -13,12 +13,14 @@ import { JwtStrategy } from './jwt.strategy';
     PassportModule,
     JwtModule.registerAsync({
       imports: [ConfigModule],
-      useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>(ConfigEnum.SECRET),
-        signOptions: {
-          expiresIn: '1d',
-        },
-      }),
+      useFactory: async (configService: ConfigService) => {
+        return {
+          secret: configService.get<string>(ConfigEnum.SECRET),
+          signOptions: {
+            expiresIn: '1d',
+          },
+        };
+      },
       inject: [ConfigService],
     }),
   ],

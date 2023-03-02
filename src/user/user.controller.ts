@@ -18,6 +18,7 @@ import {
   Headers,
   UnauthorizedException,
   ParseIntPipe,
+  UseGuards,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ConfigService } from '@nestjs/config';
@@ -28,6 +29,7 @@ import { getUserDto } from './dto/get-user.dto';
 import { TypeormFilter } from '../filters/typeorm.filter';
 import { CreateUserPipe } from './pipes/create-user/create-user.pipe';
 import { CreateUserDto } from './dto/create-user.dto';
+import { AuthGuard } from '@nestjs/passport';
 
 // import { Logger } from 'nestjs-pino';
 
@@ -66,7 +68,13 @@ export class UserController {
   }
 
   @Get('profile')
-  getProfile(@Query('id', ParseIntPipe) id) {
+  @UseGuards(AuthGuard('jwt'))
+  getProfile(
+    @Query('id', ParseIntPipe) id,
+    // 这里req中的user是通过AuthGuard('jwt')中的validate方法返回的
+    // passportModule来添加的
+    //@Req() req
+  ) {
     console.log(
       '🚀 ~ file: user.controller.ts:88 ~ UserController ~ getProfile ~ query',
       id,

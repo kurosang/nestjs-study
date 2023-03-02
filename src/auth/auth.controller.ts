@@ -18,9 +18,12 @@ export function TypeOrmDecorator() {
 export class AuthController {
   constructor(private authSevice: AuthService) {}
   @Post('/signin')
-  signin(@Body() dto: SigninUserDto) {
+  async signin(@Body() dto: SigninUserDto) {
     const { username, password } = dto;
-    return this.authSevice.signin(username, password);
+    const token = await this.authSevice.signin(username, password);
+    return {
+      access_token: token,
+    };
   }
 
   @Post('/signup')
