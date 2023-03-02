@@ -30,6 +30,7 @@ import { TypeormFilter } from '../filters/typeorm.filter';
 import { CreateUserPipe } from './pipes/create-user/create-user.pipe';
 import { CreateUserDto } from './dto/create-user.dto';
 import { AuthGuard } from '@nestjs/passport';
+import { AdminGuard } from '../guards/admin/admin.guard';
 
 // import { Logger } from 'nestjs-pino';
 
@@ -49,6 +50,12 @@ export class UserController {
   }
 
   @Get()
+  // 非常重要的知识点
+  // 1.装饰器的执行顺序，方法的装饰器如果有多个，则是从下往上执行
+  // @UseGuards(AdminGuard)
+  // @UseGuards(AuthGuard('jwt'))
+  // 2.如果使用UseGuards传递多个守卫，则从前往后执行，如果前面的Guard没有通过，则后面的Guard不会执行
+  @UseGuards(AuthGuard('jwt'), AdminGuard)
   getUsers(@Query() query: getUserDto): any {
     console.log(
       '🚀 ~ file: user.controller.ts:50 ~ UserController ~ getUsers ~ query',

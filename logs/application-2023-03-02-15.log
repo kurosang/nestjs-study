@@ -1,0 +1,45 @@
+info: UserController init {"timestamp":"2023-03-02T07:49:48.686Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:49:48.731Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.734Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.735Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.736Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.739Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.739Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.740Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.740Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.741Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.743Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:49:48.744Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.744Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:49:48.745Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T07:49:48.749Z"}
+info: UserController init {"timestamp":"2023-03-02T07:50:36.218Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:50:36.273Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.284Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.286Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.287Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.289Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.291Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.292Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.293Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.294Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.297Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:50:36.301Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.302Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:36.303Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T07:50:36.308Z"}
+info: UserController init {"timestamp":"2023-03-02T07:50:42.841Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:50:42.879Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.884Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.886Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.888Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.890Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.891Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.891Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.892Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.893Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.894Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T07:50:42.896Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.897Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T07:50:42.897Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T07:50:42.902Z"}
