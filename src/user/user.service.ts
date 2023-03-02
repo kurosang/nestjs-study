@@ -6,6 +6,7 @@ import { conditionUtils } from '../utils/db.helper';
 import { getUserDto } from './dto/get-user.dto';
 // import { Logs } from '../logs/logs.entity';
 import { User } from './user.entity';
+import * as argon2 from 'argon2';
 
 @Injectable()
 export class UserService {
@@ -69,6 +70,10 @@ export class UserService {
   }
 
   async create(user: Partial<User>) {
+    console.log(
+      '🚀 ~ file: user.service.ts:73 ~ UserService ~ create ~ user:',
+      user,
+    );
     if (!user.roles) {
       const role = await this.rolesRepository.findOne({
         where: {
@@ -86,6 +91,9 @@ export class UserService {
       });
     }
     const userTmp = await this.userRepository.create(user);
+    // 对用户密码加密
+    userTmp.password = await argon2.hash(user.password);
+
     return this.userRepository.save(userTmp);
   }
 

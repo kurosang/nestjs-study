@@ -36,7 +36,7 @@ import { JwtGuard } from '../guards/jwt.guard';
 // import { Logger } from 'nestjs-pino';
 
 @Controller('user')
-@UseGuards(JwtGuard)
+// @UseGuards(JwtGuard)
 // @UseFilters(new TypeormFilter())
 export class UserController {
   // private logger = new Logger(UserController.name);

@@ -1,0 +1,154 @@
+info: UserController init {"timestamp":"2023-03-02T09:19:14.509Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:19:14.541Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.544Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.544Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.545Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.546Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.546Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.547Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.547Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.548Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.549Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:19:14.549Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.549Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:19:14.550Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:19:14.552Z"}
+error: Cannot read properties of undefined (reading 'username') {"context":"ExceptionsHandler","stack":["TypeError: Cannot read properties of undefined (reading 'username')\n    at AdminGuard.canActivate (/Users/kuro/Desktop/project/nestjs-study/src/guards/admin.guard.ts:13:55)\n    at GuardsConsumer.tryActivate (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)\n    at canActivateFn (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:134:59)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:42:37\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:144:13)\n    at Route.dispatch (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:114:3)\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/index.js:284:15"],"timestamp":"2023-03-02T09:25:02.187Z"}
+error: Cannot read properties of undefined (reading 'username') {"context":"ExceptionsHandler","stack":["TypeError: Cannot read properties of undefined (reading 'username')\n    at AdminGuard.canActivate (/Users/kuro/Desktop/project/nestjs-study/src/guards/admin.guard.ts:13:55)\n    at GuardsConsumer.tryActivate (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)\n    at canActivateFn (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:134:59)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:42:37\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:144:13)\n    at Route.dispatch (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:114:3)\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/index.js:284:15"],"timestamp":"2023-03-02T09:26:26.658Z"}
+info: UserController init {"timestamp":"2023-03-02T09:27:03.288Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:03.318Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.321Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.322Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.323Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.324Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.324Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.325Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.325Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.326Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.326Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:03.327Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.327Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:03.328Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:27:03.331Z"}
+error: Cannot read properties of undefined (reading 'username') {"context":"ExceptionsHandler","stack":["TypeError: Cannot read properties of undefined (reading 'username')\n    at AdminGuard.canActivate (/Users/kuro/Desktop/project/nestjs-study/src/guards/admin.guard.ts:13:55)\n    at GuardsConsumer.tryActivate (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)\n    at canActivateFn (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:134:59)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:42:37\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:144:13)\n    at Route.dispatch (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:114:3)\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/index.js:284:15"],"timestamp":"2023-03-02T09:27:06.609Z"}
+info: UserController init {"timestamp":"2023-03-02T09:27:24.740Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:24.766Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.768Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.769Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.770Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.771Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.771Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.772Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.772Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.773Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.774Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:24.774Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.775Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:24.775Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:27:24.779Z"}
+error: Cannot read properties of undefined (reading 'username') {"context":"ExceptionsHandler","stack":["TypeError: Cannot read properties of undefined (reading 'username')\n    at AdminGuard.canActivate (/Users/kuro/Desktop/project/nestjs-study/src/guards/admin.guard.ts:13:55)\n    at GuardsConsumer.tryActivate (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/guards/guards-consumer.js:15:34)\n    at canActivateFn (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:134:59)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-execution-context.js:42:37\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+@nestjs+core@9.2.1_e6la6qvsclaae2becwjnmfvsuq/node_modules/@nestjs/core/router/router-proxy.js:9:23\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:144:13)\n    at Route.dispatch (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/route.js:114:3)\n    at Layer.handle [as handle_request] (/Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/kuro/Desktop/project/nestjs-study/node_modules/.pnpm/registry.npmmirror.com+express@4.18.2/node_modules/express/lib/router/index.js:284:15"],"timestamp":"2023-03-02T09:27:26.423Z"}
+info: UserController init {"timestamp":"2023-03-02T09:27:41.433Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:41.456Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.460Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.461Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.462Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.462Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.463Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.463Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.464Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.464Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.465Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:27:41.466Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.466Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:27:41.467Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:27:41.469Z"}
+info: UserController init {"timestamp":"2023-03-02T09:30:58.858Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:30:58.930Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.934Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.935Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.946Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.948Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.953Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.955Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.961Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.963Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.966Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:30:58.968Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.969Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:30:58.980Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:30:58.987Z"}
+info: UserController init {"timestamp":"2023-03-02T09:31:11.260Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:31:11.361Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.367Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.368Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.370Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.371Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.372Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.373Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.375Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.377Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.381Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:31:11.382Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.383Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:31:11.383Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:31:11.387Z"}
+info: UserController init {"timestamp":"2023-03-02T09:32:07.510Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:07.556Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.560Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.561Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.562Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.563Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.564Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.564Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.567Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.568Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.569Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:07.570Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.570Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:07.571Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:32:07.575Z"}
+info: UserController init {"timestamp":"2023-03-02T09:32:15.275Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:15.307Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.311Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.311Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.312Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.313Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.313Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.316Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.317Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.318Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.320Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:15.320Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.321Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:15.321Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:32:15.326Z"}
+info: UserController init {"timestamp":"2023-03-02T09:32:56.031Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:56.086Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.090Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.091Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.092Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.095Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.097Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.098Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.100Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.101Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.103Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:32:56.104Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.104Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:32:56.105Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:32:56.108Z"}
+info: UserController init {"timestamp":"2023-03-02T09:33:36.065Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:33:36.108Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.111Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.112Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.114Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.115Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.116Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.117Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.119Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.119Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.121Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-02T09:33:36.121Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.122Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-02T09:33:36.123Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-02T09:33:36.126Z"}

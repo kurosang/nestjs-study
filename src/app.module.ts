@@ -45,10 +45,10 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
   controllers: [],
   providers: [
     Logger,
-    {
-      provide: APP_GUARD,
-      useClass: AdminGuard,
-    },
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: AdminGuard,
+    // },
   ],
   exports: [Logger],
 })
