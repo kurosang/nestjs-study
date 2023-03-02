@@ -7,6 +7,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { LogServiceModule } from './log-service/log-service.module';
 import { connectionParams } from '../ormconfig';
 import { AuthModule } from './auth/auth.module';
+import { APP_GUARD } from '@nestjs/core';
+import { AdminGuard } from './guards/admin.guard';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -41,7 +43,13 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     AuthModule,
   ],
   controllers: [],
-  providers: [Logger],
+  providers: [
+    Logger,
+    {
+      provide: APP_GUARD,
+      useClass: AdminGuard,
+    },
+  ],
   exports: [Logger],
 })
 export class AppModule {}

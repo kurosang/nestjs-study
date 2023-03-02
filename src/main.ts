@@ -25,6 +25,9 @@ async function bootstrap() {
     }),
   );
 
+  // 弊端：无法使用DI -> 无法访问userService，需要在app.module的provider引入guard
+  // app.useGlobalGuards()
+
   const port = 3000;
   await app.listen(port);
   // logger.warn(`App 运行在 ${port}`);

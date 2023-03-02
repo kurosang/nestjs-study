@@ -1,4 +1,4 @@
-import { Module, Logger } from '@nestjs/common';
+import { Module, Logger, Global } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 // import { Logs } from '../logs/logs.entity';
 import { UserController } from './user.controller';
@@ -7,6 +7,8 @@ import { UserService } from './user.service';
 import { LoggerModule } from 'nestjs-pino';
 import path = require('path');
 import { Roles } from '../roles/roles.entity';
+// 让其他模块不import也可以使用
+@Global()
 @Module({
   imports: [
     TypeOrmModule.forFeature([User, Roles]),
