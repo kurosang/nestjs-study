@@ -9,6 +9,7 @@ import { connectionParams } from '../ormconfig';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AdminGuard } from './guards/admin.guard';
+import { LogsModule } from './logs/logs.module';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -39,6 +40,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     }),
     TypeOrmModule.forRoot(connectionParams),
     UserModule,
+    LogsModule,
     LogServiceModule,
     AuthModule,
   ],

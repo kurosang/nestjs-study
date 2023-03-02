@@ -12,6 +12,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Profile } from './profile.entity';
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {
@@ -22,6 +23,7 @@ export class User {
   username: string;
 
   @Column()
+  @Exclude()
   password: string;
 
   // Typescript -> 数据库 关联关系 Mapping

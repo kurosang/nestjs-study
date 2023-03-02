@@ -1,11 +1,14 @@
 import {
   Body,
+  ClassSerializerInterceptor,
   Controller,
   HttpException,
   Post,
   UseFilters,
+  UseInterceptors,
 } from '@nestjs/common';
 import { TypeormFilter } from '../filters/typeorm.filter';
+import { SerializeInterceptor } from '../interceptors/serialize.interceptor';
 import { AuthService } from './auth.service';
 import { SigninUserDto } from './dto/signin-user.dto';
 
@@ -14,6 +17,7 @@ export function TypeOrmDecorator() {
 }
 
 @Controller('auth')
+@UseInterceptors(ClassSerializerInterceptor)
 // @TypeOrmDecorator()
 export class AuthController {
   constructor(private authSevice: AuthService) {}
