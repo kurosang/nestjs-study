@@ -1,9 +1,24 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+} from '@nestjs/common';
 import { RolesService } from './roles.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
+import { Roles } from '../decorators/roles.decorator';
+import { Role } from '../enum/roles.enum';
+import { RoleGuard } from '../guards/role.guard';
+import { JwtGuard } from '../guards/jwt.guard';
 
 @Controller('roles')
+@Roles(Role.Admin)
+@UseGuards(JwtGuard, RoleGuard)
 export class RolesController {
   constructor(private readonly rolesService: RolesService) {}
 
@@ -13,6 +28,7 @@ export class RolesController {
   }
 
   @Get()
+  // @Roles(Role.User)
   findAll() {
     return this.rolesService.findAll();
   }
