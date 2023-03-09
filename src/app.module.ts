@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AdminGuard } from './guards/admin.guard';
 import { LogsModule } from './logs/logs.module';
+import { RolesModule } from './roles/roles.module';
 
 const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
 
@@ -43,6 +44,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
     LogsModule,
     LogServiceModule,
     AuthModule,
+    RolesModule,
   ],
   controllers: [],
   providers: [

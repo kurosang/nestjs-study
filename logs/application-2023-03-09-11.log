@@ -1,0 +1,24 @@
+info: UserController init {"timestamp":"2023-03-09T03:09:18.140Z"}
+info: UserController {/user}: {"context":"RoutesResolver","timestamp":"2023-03-09T03:09:18.152Z"}
+info: Mapped {/user, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.158Z"}
+info: Mapped {/user, POST} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.165Z"}
+info: Mapped {/user/profile, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.166Z"}
+info: Mapped {/user/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.167Z"}
+info: Mapped {/user/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.168Z"}
+info: Mapped {/user/range, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.169Z"}
+info: Mapped {/user/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.170Z"}
+info: Mapped {/user/logsbygroup, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.171Z"}
+info: Mapped {/user/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.173Z"}
+info: LogsController {/logs}: {"context":"RoutesResolver","timestamp":"2023-03-09T03:09:18.173Z"}
+info: Mapped {/logs, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.175Z"}
+info: Mapped {/logs, POST} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.178Z"}
+info: AuthController {/auth}: {"context":"RoutesResolver","timestamp":"2023-03-09T03:09:18.179Z"}
+info: Mapped {/auth/signin, POST} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.181Z"}
+info: Mapped {/auth/signup, POST} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.181Z"}
+info: RolesController {/roles}: {"context":"RoutesResolver","timestamp":"2023-03-09T03:09:18.182Z"}
+info: Mapped {/roles, POST} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.182Z"}
+info: Mapped {/roles, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.183Z"}
+info: Mapped {/roles/:id, GET} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.185Z"}
+info: Mapped {/roles/:id, PATCH} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.186Z"}
+info: Mapped {/roles/:id, DELETE} route {"context":"RouterExplorer","timestamp":"2023-03-09T03:09:18.187Z"}
+info: Nest application successfully started {"context":"NestApplication","timestamp":"2023-03-09T03:09:18.197Z"}
