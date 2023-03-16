@@ -9,15 +9,20 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: yGlduhmIte6nQq6X6BKhaFpiw7Qvu0c4
+      MYSQL_DATABASE: nestjs-backend
+      MYSQL_USER: kuro
+      MYSQL_PASSWORD: lpsLtD6SJ98oQiLFzIZ8iz5WiaYa1g3X
+    volumes:
+      - /home/mysql/db:/var/lib/mysql
     ports:
-      - 3306:3306
+      - 12000:3306
   # 简易版管理工具，可以用navicat、workbench
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
+      - 12005:8080
 
   # mongo:
   #   image: mongo
