@@ -26,7 +26,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'dev'}`;
       load: [() => Dotenv.config({ path: '.env' })],
       validationSchema: Joi.object({
         NODE_ENV: Joi.string().valid('prod', 'dev').default('dev'),
-        DB_PORT: Joi.number().valid(3306), // 限制数值是3306
+        //   DB_PORT: Joi.number().valid(3306), // 限制数值是3306
         DB_HOST: Joi.alternatives().try(
           Joi.string().ip(),
           Joi.string().domain(),

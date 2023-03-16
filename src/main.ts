@@ -5,6 +5,7 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 import { AllExceptionFilter } from './filters/all-exception.filter';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+
 async function bootstrap() {
   // createLogger of Winston
 
@@ -40,7 +41,7 @@ async function bootstrap() {
     }),
   );
 
-  const port = 3000;
+  const port = 11999;
   await app.listen(port);
   // logger.warn(`App 运行在 ${port}`);
 }
